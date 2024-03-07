@@ -1,5 +1,4 @@
 import axios from 'axios'
-
 interface IPhoto {
   id: string
   urls: {
@@ -25,7 +24,8 @@ export const fetchPhotos = async ({ searchQuery, page, setPhotos, setPage }: IFe
     )
 
     const newPhotos = response.data.results as IPhoto[]
-    setPhotos((prevPhotos) => [...prevPhotos, ...newPhotos])
+
+    setPhotos((prevPhotos) => (page === 1 ? newPhotos : [...prevPhotos, ...newPhotos]))
     setPage((prevPage) => prevPage + 1)
   } catch (error) {
     console.error('Error fetching photos:', error)
