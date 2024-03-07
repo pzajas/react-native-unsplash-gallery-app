@@ -1,66 +1,77 @@
-Description
-Yeast is a mobile application developed using React Native, Expo, and Firebase. It allows users to search and view photos. The application includes features such as authentication, photo fetching, and social login options.
+# 🎮 Unsplash Gallery App 🎮
 
-Version
-1.0.0
+Unsplash Gallery App is a mobile application developed using React Native, Expo, and Firebase. It provides users with the ability to explore and view a vast collection of stunning photos from Unsplash. The app incorporates essential features like user authentication, photo fetching, and social login options.
 
-Table of Contents
-Installation
-Usage
-Dependencies
-Development
-Testing
-Contributing
-License
-Installation
-Clone the repository: git clone https://github.com/your-username/yeast.git
-Navigate to the project directory: cd yeast
-Install dependencies: yarn install
-Usage
-To run the application on different platforms:
+## ✨ Features ✨
 
-Android: yarn android
-iOS: yarn ios
-Web: yarn web
-Dependencies
-Expo
-Firebase
-React Native
-Redux
-TypeScript
-and more (see package.json for the full list)
-Development
-To start development, follow these steps:
+  - **Photo Exploration**: Users can search and view a vast collection of high-quality photos from Unsplash.
+  - **Feedback on Photo Display**: The app provides a visually pleasing display of photos, ensuring an immersive experience for users.
+  - **Search Functionality**: Users can search for specific photos or browse through curated collections.
+  - **Authentication**: Secure authentication mechanisms ensure a personalized experience for users.
+  - **Social Login Options**: Integration with social login options for a seamless and convenient login process.
+  - **Redux Integration**: Redux is utilized for efficient state management, enhancing the overall performance of the application.
+  - **Firebase Integration**: Integration with Firebase for a reliable and scalable backend infrastructure.
 
-Install development dependencies: yarn install --dev
-Start the development server: yarn start
-Testing
-The application uses Jest for testing. Run tests with the command: yarn test
+## 🚀 Getting Started
 
-Contributing
-Feel free to contribute by creating issues or submitting pull requests. Follow the Contribution Guidelines for more details.
+### Prerequisites
 
-License
-This project is licensed under the MIT License.
+  - Node.js (https://nodejs.org/)
+  - Expo CLI (https://docs.expo.dev/get-started/installation/)
+  - Git (https://git-scm.com/)
 
-Additional Information
-HomeScreen Tests
-The HomeScreen component is tested using the @testing-library/react-native library. Three tests are included to ensure the correct rendering of the component, fetching photos based on a search query, and displaying an alert in case of no internet connection.
+### Getting Started
 
-HomeScreen Component
-The HomeScreen component is a React functional component that utilizes various dependencies such as react-hook-form, react-redux, and Expo libraries for fetching photos, navigation, and UI components.
+Before getting started, ensure you have the following software installed on your development machine:
 
-Redux Store Configuration
-The application uses Redux for state management. The Redux store is configured in the store.ts file, with persistence handled by redux-persist and AsyncStorage.
+  - **Node.js**: You can download and install Node.js from the official website: [https://nodejs.org/](https://nodejs.org/)
+  
+  - **Expo CLI**: Install Expo CLI globally using npm:
+  
+        yarn global add expo-cli
+        
+  - **Git**: You can download and install Git from the official website: [https://git-scm.com/](https://git-scm.com/)
 
-Main Navigation Stack
-The main navigation stack is implemented using @react-navigation/native-stack. The MainStack component decides whether to show the user-logged or user-not-logged stack based on authentication status.
+### Installation
 
-Firebase Authentication Utility
-The checkLoginStatus function in authenticationUtility.ts checks the user's login status using Firebase authentication and waits for the user to be available.
+Follow these steps to set up and run the Unsplash App:
 
-LoginScreen Component
-The LoginScreen component handles user authentication using Firebase email/password authentication. It includes form validation and error handling.
+  1. **Clone the repository:**
+        ```
+        git clone git@github.com:pzajas/react-native-unsplash-gallery-app.git
+        cd <app_folder>
+  2. **Install the dependencies:**
+        ```
+        yarn install
+  3. **Start the Expo development server:**
+        ```
+        yarn start
+  4. **Running the App:**
+  
+     - Install the Expo Go app on your Android or iOS device.
+     - Open the Expo Go app and scan the QR code displayed in the terminal after running npm start.
+     - You may need to switch from development to expo go build - press letter S in terminal when u see development QR code.
+     - The app will open on your mobile device.
+     
+     Note: Make sure your development machine and mobile device are connected to the same network.
 
-RegisterScreen Component
-The RegisterScreen component provides options for social login and user registration using Firebase authentication. It includes a toggle for switching between login and registration forms.
+## 🔧 Technologies Used 🔧
+  
+  - **React Native**: A JavaScript framework for building cross-platform mobile applications.
+  - **Redux**: A predictable state container for managing application state.
+  - **Expo**: A set of tools for building and deploying React Native apps.
+  - **typescript**: A language for application-scale JavaScript development.- 
+  - **@reduxjs/toolkit**: A set of utilities and abstractions for efficient Redux development.
+  - **redux-persist**: A library for persisting and rehydrating a Redux store.
+   
+  - *eslint*: A pluggable and configurable JavaScript linter.
+  - *prettier*: A code formatter to keep the codebase consistent and clean.
+
+## 📝 License 📝
+
+  This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments 🙏
+
+  - The creators of React Native, Expo, and Redux for providing excellent tools and libraries for building mobile apps.
+  - The open-source community for their valuable contributions and support.
