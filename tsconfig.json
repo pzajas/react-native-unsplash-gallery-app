@@ -12,6 +12,7 @@
     "target": "esnext",
     "skipLibCheck": true,
     "baseUrl": "./",
+    "types": ["jest"],
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],

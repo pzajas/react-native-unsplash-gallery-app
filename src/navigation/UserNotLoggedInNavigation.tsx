@@ -19,7 +19,7 @@ export const UserNotLoggedInNavigation = () => {
         },
         drawerPosition: 'right',
         drawerType: 'front',
-        header: () => <UpperMenu />,
+        // header: () => <UpperMenu />,
       }}
     >
       <Drawer.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false }} />

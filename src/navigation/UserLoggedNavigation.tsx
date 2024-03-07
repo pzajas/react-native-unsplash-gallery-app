@@ -24,7 +24,9 @@ export const UserLoggedNavigation = () => {
         },
         tabBarShowLabel: false,
         header: () => <></>,
-        tabBarActiveTintColor: theme.colors.primary,
+        tabBarActiveTintColor: theme.colors.white,
+        tabBarActiveBackgroundColor: theme.colors.white,
+        tabBarInactiveBackgroundColor: theme.colors.white,
         tabBarIcon: ({ focused }) => <InstagramIcon focused={focused} />,
       }}
     >
