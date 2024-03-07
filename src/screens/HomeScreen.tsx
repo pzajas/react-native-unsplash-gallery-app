@@ -24,6 +24,7 @@ export const HomeScreen: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [photos, setPhotos] = useState<IPhoto[]>([])
   const [page, setPage] = useState(1)
+  const [hasError, setHasError] = useState(false)
 
   useEffect(() => {
     void checkLoginStatus()
@@ -44,16 +45,30 @@ export const HomeScreen: React.FC = () => {
   const fetchPhotosData = async (): Promise<void> => {
     try {
       await fetchPhotos({ searchQuery, page, setPhotos, setPage })
+      setHasError(false)
     } catch (error) {
-      console.error(error)
-      Alert.alert('Error', 'An error occurred while fetching photos. Please try again later.', [{ text: 'OK' }])
+      if (!hasError) {
+        setHasError(true)
+        Alert.alert('Error', 'An error occurred while fetching photos. Please try again later.', [
+          { text: 'OK', onPress: () => setHasError(false) },
+        ])
+      }
     }
   }
 
   useEffect(() => {
-    if (searchQuery) {
-      void fetchPhotosData()
-    }
+    const delaySearch = setTimeout(() => {
+      if (searchQuery !== '') {
+        setPhotos([])
+        setPage(1)
+        void fetchPhotosData()
+      } else {
+        setPhotos([])
+        setPage(1)
+      }
+    }, 300)
+
+    return () => clearTimeout(delaySearch)
   }, [searchQuery])
 
   const handleEndReached = () => {

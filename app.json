@@ -5,27 +5,17 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
-    "icon": "./assets/images/icon.png",
-    "splash": {
-      "image": "./assets/images/splash/logotyp.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "buildNumber": "1.0.0",     
+      "buildNumber": "1.0.0",
       "supportsTablet": true,
       "bundleIdentifier": "test",
       "infoPlist": {
-        "UIBackgroundModes": [
-          "audio"
-        ],
+        "UIBackgroundModes": ["audio"],
         "UIStatusBarStyle": "light-content"
       }
     },
-    "android": {    
+    "android": {
       "useNextNotificationsApi": true,
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
@@ -69,7 +59,7 @@
         {
           "calendarPermission": "The app needs to access your calendar."
         }
-      ],     
+      ],
       "@react-native-firebase/app",
       "@react-native-firebase/perf",
       "@react-native-firebase/crashlytics",
@@ -83,8 +73,7 @@
       ]
     ],
     "extra": {
-      "eas": {
-      }
+      "eas": {}
     }
   }
 }

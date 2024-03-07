@@ -9,6 +9,7 @@ import { setIsEmailVerified } from '../redux/features/loginSlice'
 import { collection, setDoc, doc } from 'firebase/firestore'
 import { getFirestore } from 'firebase/firestore'
 import uuid from 'react-native-uuid'
+import React from 'react'
 interface IAutenticationForm {
   isLoginPanelVisible: boolean
 }
@@ -23,7 +24,7 @@ export const AuthenticationForm = ({ isLoginPanelVisible }: IAutenticationForm) 
   } = useForm()
   const [loading, setLoading] = useState(false)
   const [email, setEmail] = useState('zajas.piotr@gmail.com')
-  const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('abc123')
   const dispatch = useDispatch()
 
   const auth = FIREBASE_AUTH
@@ -114,7 +115,7 @@ export const AuthenticationForm = ({ isLoginPanelVisible }: IAutenticationForm) 
               style={styles.input}
               placeholder={!isLoginPanelVisible ? 'Provide register password' : 'Provide login password'}
               secureTextEntry={true}
-              value={value}
+              value={'abc123'}
               onChangeText={(text) => {
                 setPassword(text)
                 onChange(text)
@@ -123,7 +124,7 @@ export const AuthenticationForm = ({ isLoginPanelVisible }: IAutenticationForm) 
           )}
           name="password"
           rules={{ required: 'Password is required' }}
-          defaultValue=""
+          defaultValue="'abc123'"
         />
 
         {errors.password && <Text style={{ color: 'red' }}>{errors.password.message}</Text>}
