@@ -1,4 +1,4 @@
-import { theme } from '../../src/styles/theme'
+import { theme } from '../../styles/theme'
 import Svg, { G, Path, Defs, ClipPath } from 'react-native-svg'
 
 export const ChevronLeftIcon = (props) => (
